@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
     var password = "secret";
     var auth = "Basic " + new Buffer(username + ":" + password).toString("base64");
     var request = require('request');
-    var url = "https://smartpass.doo.dev/oauth2/oauth/check_token?token=319838fc-b137-45f4-8358-b26a3ad2e273";
+    var url = "https://auth.smart-pass.com/oauth2/oauth/check_token?token=67e326a6-19bb-47b1-8a41-c2c22cfa912b";
     var a = "no";
     request.get( {
         url : url,
