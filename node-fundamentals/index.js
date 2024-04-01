@@ -16,11 +16,12 @@ const server = http.createServer((req, res) => {
         }
     }, function(error, response, body) {
         console.log('body : ', body);
-        a = body;
+        console.log('error : ', error);
+        console.log('res : ', response);
     } );
 
   res.writeHead(200, { "Content-Type": "text/plain" });
-  res.end("Hello world! " + a);
+  res.end("Hello world!");
 });
 
 const PORT = process.env.PORT || 3000;
