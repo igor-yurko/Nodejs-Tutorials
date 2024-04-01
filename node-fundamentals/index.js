@@ -9,7 +9,7 @@ const server = http.createServer((req, res) => {
     var request = require('request');
     var url = "https://auth.smart-pass.com/oauth2/oauth/check_token?token=67e326a6-19bb-47b1-8a41-c2c22cfa912b";
     var a = "no";
-    request.get( {
+    request.post( {
         url : url,
         headers : {
             "Authorization" : auth
