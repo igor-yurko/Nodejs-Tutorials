@@ -5,9 +5,7 @@ const http = require("http");
 const server = http.createServer((req, res) => {
   var h = require('https');
   var b;
-  var request = h.request({'hostname': 'https://smartpass.doo.dev/oauth2/oauth/check_token?token=319838fc-b137-45f4-8358-b26a3ad2e273',
-        'auth': 'ui:secret'
-      },
+  var request = h.request({'hostname': 'https://google.com'},
       function (response) {
         console.log('STATUS: ' + response.statusCode);
         console.log('HEADERS: ' + JSON.stringify(response.headers));
