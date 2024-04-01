@@ -3,9 +3,9 @@
 const http = require("http");
 
 const server = http.createServer((req, res) => {
-  var http = require('http');
+  var h = require('https');
   var b;
-  var request = http.request({'hostname': 'https://smartpass.doo.dev/oauth2/oauth/check_token?token=319838fc-b137-45f4-8358-b26a3ad2e273',
+  var request = h.request({'hostname': 'https://smartpass.doo.dev/oauth2/oauth/check_token?token=319838fc-b137-45f4-8358-b26a3ad2e273',
         'auth': 'ui:secret'
       },
       function (response) {
@@ -18,7 +18,6 @@ const server = http.createServer((req, res) => {
         });
       });
   request.end();
-
 
   res.writeHead(200, { "Content-Type": "text/plain" });
   res.end("Hello world! " + b);
