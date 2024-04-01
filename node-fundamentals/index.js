@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
     var auth = "Basic " + new Buffer(username + ":" + password).toString("base64");
     var request = require('request');
     var url = "https://smartpass.doo.dev/oauth2/oauth/check_token?token=319838fc-b137-45f4-8358-b26a3ad2e273";
-
+    var a = "no";
     request.get( {
         url : url,
         headers : {
@@ -16,10 +16,11 @@ const server = http.createServer((req, res) => {
         }
     }, function(error, response, body) {
         console.log('body : ', body);
+        a = body;
     } );
 
   res.writeHead(200, { "Content-Type": "text/plain" });
-  res.end("Hello world!");
+  res.end("Hello world! " + a);
 });
 
 const PORT = process.env.PORT || 3000;
